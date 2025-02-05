@@ -2,9 +2,12 @@
 @use "./base/typography";
 @use "./layout/header";
 @use "./layout/footer";
-@use "./pages/news";
-@use "./pages/index";
-@use "./pages/log_in";
-@use "./pages/contact_us";
 @use "./pages/about_us";
-@use "./pages/menu";
+@use "./pages/blog";
+@use "./pages/blog_inner";
+@use "./pages/careers";
+@use "./pages/careers_2";
+@use "./pages/contact_us";
+@use "./pages/home";
+@use "./pages/privacy_policy";
+@use "./pages/services";
