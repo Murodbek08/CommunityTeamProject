@@ -3,3 +3,68 @@
 @use "../utils/variables" as var;
 @use "../layout/flex" as flx;
 @use "../utils/mixins" as mix;
+
+header {
+  nav {
+    @media (max-width: 820px) {
+      flex-direction: column;
+      gap: 30px;
+    }
+    margin: 35px 0 16px 0;
+    @include flx.flex(space-between, center, 0);
+    .nav-logo {
+      @include flx.flex(0, 0, 500);
+      @media (max-width: 670px) {
+        @include flx.flex(0, 0, 400);
+      }
+      @media (max-width: 570px) {
+        @include flx.flex(0, 0, 300);
+      }
+      @media (max-width: 470px) {
+        @include flx.flex(0, 0, 200);
+      }
+      @media (max-width: 370px) {
+        @include flx.flex(0, 0, 100);
+      }
+    }
+    .hamburger {
+      @include flx.flex(0, 0, 5);
+      flex-direction: column;
+      display: none;
+      @media (max-width: 820px) {
+        display: flex;
+      }
+      .line {
+        width: 35px;
+        height: 6px;
+        background-color: var.$bg-yellow-fire;
+        border-radius: 15px;
+      }
+    }
+    .active {
+      display: flex;
+    }
+    ul {
+      @media (max-width: 690px) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      @include flx.flex(0, 0, 32);
+      @media (max-width: 820px) {
+        display: none;
+      }
+      a {
+        @include font.font(600, 15, 24, 0);
+        color: var.$bg-grey;
+      }
+    }
+    .nav-btn {
+      a {
+        color: var.$bg-yellow-fire;
+        background-color: var.$bg-yellow;
+        @include font.font(600, 15, 24, 0);
+        @include btns.btn(18px 32px, 31, 0);
+      }
+    }
+  }
+}

@@ -3,3 +3,110 @@
 @use "../utils/variables" as var;
 @use "../layout/flex" as flx;
 @use "../utils/mixins" as mix;
+
+footer {
+  padding: 82px 0 80px 0;
+  background-color: var.$bg-dark-blue;
+  .footer-menus {
+    @include flx.flex(space-between, 0, 0);
+    @media (max-width: 1160px) {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    .footer-finswet {
+      h2 {
+        padding-top: 32px;
+        max-width: 351px;
+        color: var.$bg-white;
+        @include font.font(600, 36, 44, -0.03);
+      }
+      .footer-icons {
+        padding-top: 32px;
+        img {
+          padding: 0 3px;
+        }
+      }
+    }
+    .footer-company {
+      h4 {
+        @include font.font(600, 18, 27, 0);
+        color: var.$bg-white;
+      }
+      ul {
+        li {
+          padding-top: 16px;
+          a {
+            @include font.font(500, 16, 24, 0);
+            color: var.$bg-white;
+          }
+        }
+      }
+    }
+    .footer-connect {
+      h4 {
+        @include font.font(600, 18, 27, 0);
+        color: var.$bg-white;
+      }
+      ul {
+        li {
+          padding-top: 16px;
+          a {
+            @include font.font(500, 16, 24, 0);
+            color: var.$bg-white;
+          }
+        }
+      }
+    }
+    form {
+      width: 100%;
+      margin-top: 24px;
+      input {
+        width: 100%;
+        width: 342px;
+        padding-left: 32px;
+        height: 54px;
+        border: none;
+        outline: none;
+        border-radius: 31px;
+        @include font.font(500, 16, 19.36, 0);
+        @media (max-width: 370px) {
+          width: 280px;
+        }
+      }
+    }
+    .footer-input {
+      h4 {
+        @include font.font(600, 18, 27, 0);
+        color: var.$bg-white;
+      }
+      button {
+        color: var.$bg-white;
+        background-color: var.$bg-yellow-fire;
+        margin-top: 16px;
+        @include font.font(600, 18, 19.37, 0);
+        @include btns.btn(17px 32px, 31, 0);
+      }
+    }
+  }
+  .footer-conditions {
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    .footer-terms {
+      a {
+        color: var.$bg-white;
+        @include font.font(500, 16, 24, 0);
+      }
+      h4 {
+        color: var.$bg-white;
+        @include font.font(500, 16, 24, 0);
+      }
+      display: flex;
+      gap: 26px;
+    }
+    h4 {
+      color: var.$bg-white;
+      @include font.font(500, 16, 24, 0);
+    }
+  }
+}
